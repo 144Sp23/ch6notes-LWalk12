@@ -1,8 +1,9 @@
 /*
-Author: Diana Linville
-Date: 5-16-22
+Author: Lane Walker
+Date: 2-28-2023
 File name: style.class*/
 /*CSS Reset */
+
 body, header, nav, main, footer, h1, div, img, ul {
   margin: 0;
   padding: 0;
@@ -20,6 +21,7 @@ img {
 }
 
 /* Style rules for mobile viewport */
+
 /* Style rule for header */
 header {
   position: -webkit-sticky;
@@ -146,19 +148,143 @@ footer p a {
   height: 50%;
 }
 
-/*
-#exercises {
-  clear: left;
-  border-top: 1px solid #000;
-  border-bottom: 1px solid #000;
-  background-color: #f2f2f2;
-  padding: 1% 2%;
+/*Media Query for Tablet Viewport*/
+@media screen and (min-width: 630px), print{
+    
+    /*Tablet Viewport: show tablet-desktop class, hide mobile class*/
+    .tablet-desktop{
+        display: block;
+    }
+    
+    .mobile{
+        display: none;
+    }
+    
+    /*Tablet Viewport: Style rule for header*/
+    header{
+        position: static;
+        padding-bottom: 2%;
+    }
+    
+    /*Tablet Viewport: atyle rule for nav area*/
+    nav li{
+        border-top: none;
+        display: inline-block;
+        border-right: 1px solid #fff;
+    }
+    
+    nav li:last-child{
+        border-right: none;
+    }
+    
+    nav li a{
+        padding: 0.1em 0.75em;
+    }
+    
+    /*Tablet Viewport: Style rules for main cintent area*/
+    main ul{
+        margin: 0 0 4% 10%;
+    }
+    
+
+    #exercises {
+      clear: left;
+      border-top: 1px solid #000;
+      background: linear-gradient(to right, #ccc, #fff);
+      border-bottom: 1px solid #000;
+      background-color: #f2f2f2;
+      padding: 1% 2%;
+    }
+
+    #exercises dt {
+      font-weight: bold;
+    }
+
+    #exercises dd {
+      padding: 0.5% 1% 2% 0;
+    }
+    
+    .tel-num{
+        font-size: 1.25em;
+    }
+    
+    .map{
+        width: 600px;
+        height: 450px;
+    }
 }
 
-#exercises dt {
-  font-weight: bold;
+/*Media query for Desktop Veiwport*/
+@media screen and (min-width: 1015px), print{
+    
+    /*Desktop Viewport: Style rule for header*/
+    header{
+        width: 25%;
+        float: left;
+        padding-bottom: 0;
+    }
+    
+    /*Desktop Viewport: Style rules for nav area*/
+    nav{
+        float: right;
+        width: 70%;
+        margin: 4em 1em 0 0;
+    }
+    
+    nav ul{
+        text-align: right;
+    }
+    
+    nav li{
+        border: none;
+    }
+    
+    nav li a{
+        padding: 0.5em 1em;
+    }
+    
+    nav li a:hover{
+        color: #000;
+        background-color: #fff;
+    }
+    
+    /*Desktop Viewport: style rule for main content*/
+    main{
+        clear: left;
+    }
+    
+    main h1{
+        font-size: 1.8em;
+    }
+    
+    #weights, #cardio, #training{
+        width: 29%;
+        float: left;
+        margin: 0 2%;
+    }
+    
+    #exercises {
+        clear: left;
+    }
+    
 }
 
-#exercises dd {
-  padding: 0.5% 1% 2% 0;
-} */
+/*Media Query for Large Desktop Viewports*/
+@media screen and (min-width: 1921px){
+    
+    #container{
+        width: 1920px;
+        margin: 0 auto;
+    }
+    
+}
+
+/*Media Query for Print*/
+@media print{
+    
+    body{
+        background-color: #fff;
+        color: #000;
+    }
+    
+}
